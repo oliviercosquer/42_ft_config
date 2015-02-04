@@ -3,45 +3,33 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: ocosquer <ocosquer@student.42.fr>          +#+  +:+       +#+         #
+#    By: olivier <olivier@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2013/11/19 18:12:20 by ocosquer          #+#    #+#              #
-#    Updated: 2013/12/02 20:10:50 by ocosquer         ###   ########.fr        #
+#    Updated: 2015/02/04 22:43:08 by olivier          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libft.a
+NAME = libft_config.a
 CC = gcc
 FLAGS = -Wall -Werror -Wextra -m32
-SRC_PATH = ./srcs
-SRC_FILES = ft_bzero.c ft_memcpy.c ft_memccpy.c \
-		ft_memchr.c ft_memmove.c ft_memset.c \
-		ft_memcmp.c ft_strlen.c ft_strdup.c \
-		ft_strcpy.c ft_strncpy.c ft_strcat.c \
-		ft_strncat.c ft_strlcat.c ft_strchr.c \
-		ft_strrchr.c ft_strstr.c ft_strnstr.c \
-		ft_strcmp.c ft_strncmp.c ft_atoi.c \
-		ft_isalpha.c ft_isdigit.c ft_isalnum.c \
-		ft_isascii.c ft_isprint.c ft_toupper.c \
-		ft_tolower.c ft_memalloc.c ft_memdel.c ft_strnew.c \
-		ft_strdel.c ft_strclr.c ft_striter.c \
-		ft_striteri.c ft_strmap.c ft_strmapi.c \
-		ft_strequ.c ft_strnequ.c ft_strsub.c \
-		ft_strjoin.c ft_strtrim.c ft_strsplit.c \
-		ft_itoa.c ft_putchar.c ft_putstr.c \
-		ft_strtrim.c ft_strsplit.c ft_itoa.c \
-		ft_putchar.c ft_putstr.c ft_putnbr.c \
-		ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c \
-		ft_putnbr_fd.c ft_strljoin.c
+INC_PATH = -I./includes \
+			-I./lib/42_libft/includes \
+			-I./lib/42_get_next_line/includes
+SRC_PATH = ./src
+SRC_FILES = ft_config.c ft_config2.c ft_config_add.c \
+			ft_config_check.c ft_config_debug.c ft_config_del.c \
+			ft_config_get.c ft_config_get2.c ft_config_parse.c \
+			ft_config_parse_path.c ft_config_read.c
 OBJ = $(SRC_FILES)
 SRCS = $(patsubst %, $(SRC_PATH)/%, $(SRC_FILES))
 all: ${NAME}
 
 ${NAME}:
-	@echo Linckage
-	$(CC) $(FLAGS) -I./includes/ -c $(SRCS)
-	@echo compilation de la library
+	@echo Compilation de $(NAME)
+	$(CC) $(FLAGS) $(INC_PATH) -c $(SRCS)
 	ar rc $(NAME) $(OBJ:.c=.o)
+	@echo Compilation de $(NAME) terminée
 
 clean:
 	@rm -f $(OBJ:.c=.o)

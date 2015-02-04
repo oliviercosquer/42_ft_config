@@ -6,7 +6,7 @@
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 20:44:09 by olivier           #+#    #+#             */
-/*   Updated: 2015/02/04 00:18:07 by olivier          ###   ########.fr       */
+/*   Updated: 2015/02/04 22:40:11 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
 # define FT_CONFIG_DATA_DELIMITER ':'
 # define FT_CONFIG_PATH_DELIMITER '.'
 # include <libft.h>
-# include <ft_printf.h>
+//# include <ft_printf.h>
 # include <get_next_line.h>
 # include <fcntl.h>
 //FOR DEBUG PURPOSE, DELETE BEFORE PUSH

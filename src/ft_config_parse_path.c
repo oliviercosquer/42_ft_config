@@ -6,7 +6,7 @@
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/02/04 00:18:30 by olivier           #+#    #+#             */
-/*   Updated: 2015/02/04 00:26:19 by olivier          ###   ########.fr       */
+/*   Updated: 2015/02/04 22:49:30 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ t_path			*ft_config_parse_path(char *str)
 	if (path)
 	{
 		section_pos = ft_strchr(str, FT_CONFIG_PATH_DELIMITER);
-		path->section ft_strnew(section_pos - str);
+		path->section = ft_strnew(section_pos - str);
 		if (path->section)
 			ft_strsub(path->section, str, str - section_pos);
 		data_name_pos = ft_strchr(section_pos + 1, FT_CONFIG_PATH_DELIMITER);

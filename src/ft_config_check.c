@@ -6,7 +6,7 @@
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/12 21:37:01 by olivier           #+#    #+#             */
-/*   Updated: 2015/02/03 21:42:59 by olivier          ###   ########.fr       */
+/*   Updated: 2015/02/04 22:46:57 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int				ft_config_is_valid_line(char *str)
 		return (1);
 	else if (ft_config_is_data(str) && ft_config_is_data_valid(str))
 		return (1);
-	else if (ft_printf_strlen(str) == 0)
+	else if (ft_strlen(str) == 0)
 		return (1);
 	return (0);
 }

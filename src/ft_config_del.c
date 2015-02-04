@@ -6,7 +6,7 @@
 /*   By: olivier <olivier@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2014/11/17 02:52:47 by anonymous         #+#    #+#             */
-/*   Updated: 2015/02/03 22:55:12 by olivier          ###   ########.fr       */
+/*   Updated: 2015/02/04 22:49:13 by olivier          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static	void	ft_config_del_data(t_data *list)
 {
-	t_data	*tmp
+	t_data	*tmp;
 
 	while (list)
 	{
